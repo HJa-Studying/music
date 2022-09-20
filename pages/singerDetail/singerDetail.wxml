@@ -1,0 +1,20 @@
+<view class="picture">
+  <image src="{{singerInfo.picUrl}}" mode="widthFix"></image>
+  <view class="sName">
+    <text>{{singerInfo.name}}</text>
+    <text>网易云音乐-热门歌手</text>
+  </view>
+</view>
+<text class="titleName">歌手简介</text>
+<text class="singerDesc">{{singerDetail}}</text>
+<text class="titleName">热门单曲</text>
+<view class="musicList" wx:for="{{singerMusic}}" wx:key="id">
+  <text class="singIndex">{{index+1}}</text>
+  <view class="musicInfo">
+    <text class="musicName">{{item.name}}</text>
+    <text class="singerName">{{item.al.name}}</text>
+  </view>
+  <view class="playMusic">
+    <image src="/images/play.png" mode="aspectFit" bind:tap="playMusic" data-index="{{item.id}}"></image>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<image class="bg" src="{{musicInfo.al.picUrl}}"></image>
+<view class="musicName">{{musicInfo.name}}</view>
+<swiper class="musicInfo">
+  <swiper-item>
+    <view class="musicImage">
+      <image src="{{musicInfo.al.picUrl}}"></image>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y="true" class="lyric">
+      <view wx:for="{{lrc}}" wx:key="index">{{item}}</view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+<!-- 进度条 -->
+<view class="timeBox">
+  <view>{{musicTime}}</view>
+  <slider block-size="12" value="{{musicS/2.0}}"></slider>
+  <view>{{musicLength}}</view>
+</view>
+<!-- 底部按钮 -->
+<view class="musicBtn">
+  <image src="/images/beforeMusic.png"></image>
+  <image wx:if="{{isPlay===true}}" src="/images/playingNo.png" bindtap="pauseMusic"></image>
+  <image wx:if="{{isPlay===false}}" src="/images/zanting.png" bindtap="playMusic"></image>
+  <image src="/images/afterMusic.png"></image>
+</view>

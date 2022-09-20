@@ -1,0 +1,74 @@
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+  display:none;
+}
+page{
+  padding:10rpx;
+  box-sizing: border-box;
+}
+/* 轮播图 */
+swiper-item image{
+  border-radius: 10rpx;
+  width:100%;
+  height:100%;
+}
+/* 标题 */
+.titleName{
+  display: block;
+  margin:16rpx 0;
+  padding-left:10rpx;
+  border-left:4rpx solid #c20c0c;
+  font-weight:700;
+}
+/* 热门歌手 */
+.singerList{
+  display:flex;
+  overflow: auto;
+}
+.singerList .singerItem{
+  text-align:center;
+  margin-right:20rpx;
+}
+.singerList .singerItem image{
+  border-radius:18rpx;
+  width:220rpx;
+  height:220rpx;
+}
+/* 热门歌曲 */
+.musicList{
+  border-bottom:1rpx solid #7070704d;
+  box-sizing: border-box;
+  padding-left:20rpx;
+  width:100%;
+  height:100rpx;
+  display:flex;
+  height:100rpx;
+}
+.musicList .musicInfo{
+  display:flex;
+  flex:1;
+  flex-direction: column;
+}
+.musicList .musicInfo .musicName{
+  width: 500rpx;
+  font-weight:700;
+  font-size:28rpx;
+  margin:10rpx 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.musicList .musicInfo .singerName{
+  font-size:22rpx;
+}
+.musicList .playMusic{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100rpx;
+}
+.musicList .playMusic image{
+  width:60rpx;
+  height:60rpx;
+  
+}

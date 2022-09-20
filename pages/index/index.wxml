@@ -1,0 +1,22 @@
+<swiper indicator-dots="true" indicator-active-color="#c20c0c" indicator-color="white" autoplay interval="3000" circular>
+    <swiper-item wx:for="{{indexImages}}" wx:key="index">
+      <image mode="aspectFill" src="{{item.imageUrl}}"></image>
+    </swiper-item>
+</swiper>
+<text class="titleName">热门歌手</text>
+<view class="singerList">
+  <view class="singerItem" wx:for="{{singers}}" wx:key="id" data-item="{{item}}" bindtap="hotlink">
+    <image src="{{item.picUrl}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<text class="titleName">最新音乐</text>
+<view class="musicList"  wx:for="{{musics}}" wx:key="id">
+  <view class="musicInfo">
+    <text class="musicName">{{item.name}}</text>
+    <text class="singerName">{{item.song.artists[0].name}}</text>
+  </view>
+  <view class="playMusic">
+    <image src="/images/play.png" mode="aspectFit" bind:tap="playMusic" data-index="{{item.id}}"></image>
+  </view>
+</view>

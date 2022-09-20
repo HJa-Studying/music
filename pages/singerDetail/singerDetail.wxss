@@ -1,0 +1,89 @@
+/* 歌手图片 */
+.picture{
+  width:100%;
+  height:600rpx;
+  overflow: hidden;
+  position:relative;
+}
+.picture image{
+  width:100%;
+  height:100%;
+}
+.sName{
+  display: flex;
+  flex-direction: column;
+  color:white;
+  position:absolute;
+  left:40rpx;
+  bottom:80rpx;
+}
+.sName text:nth-child(1){
+  font-weight: 700;
+  font-size:44rpx;
+  padding-bottom:14rpx;
+}
+/* 歌手简介 */
+.titleName{
+  display:block;
+  padding:20rpx;
+  font-weight:700;
+  font-size:38rpx;
+}
+.singerDesc{
+  box-sizing: border-box;
+  padding:0 20rpx;
+  display: block;
+  width:100%;
+  max-height:600rpx;
+  overflow: auto;
+  /* white-space: wrap;
+  text-overflow:clip; */
+}
+/* 热门单曲 */
+.musicList{
+  position: relative;
+  border-bottom:1rpx solid #7070704d;
+  box-sizing: border-box;
+  padding-left:70rpx;
+  width:100%;
+  height:100rpx;
+  display:flex;
+  height:120rpx;
+}
+.musicList .singIndex{
+  display: block;
+  width:50rpx;
+  line-height:100rpx;
+  position: absolute;
+  top:0;
+  left:20rpx;
+  font-weight: bold;
+
+}
+.musicList .musicInfo{
+  display:flex;
+  flex:1;
+  flex-direction: column;
+}
+.musicList .musicInfo .musicName{
+  width: 500rpx;
+  font-weight:700;
+  font-size:32rpx;
+  margin:10rpx 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.musicList .musicInfo .singerName{
+  font-size:24rpx;
+}
+.musicList .playMusic{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100rpx;
+}
+.musicList .playMusic image{
+  width:60rpx;
+  height:60rpx;
+}
